@@ -77,5 +77,5 @@ if st.button("Predict Sale Price"):
     default_all.loc[0, 'Neighborhood'] = neighborhood
     processed_data = preprocessor_all.transform(default_all)
     prediction = model_all.predict(processed_data)
-    st.success(f"Predicted Sale Price (All Features Model): ${prediction[0]
-    [0]:,.2f}")
+    st.success(f"Predicted Sale Price (All Features Model): ${prediction[0][0]:,.2f}")
+   
