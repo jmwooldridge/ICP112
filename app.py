@@ -70,12 +70,12 @@ if st.button("Predict Sale Price"):
     default_all = pd.read_csv('default_all_features.csv', index_col=0)
 # Now, 'default_all' contains all the features expected by the preprocessor.
 # Overwrite the essential features with user inputs
-default_all.loc[0, 'Age'] = age
-default_all.loc[0, 'Gr Liv Area'] = gr_liv_area
-default_all.loc[0, 'Lot Area'] = lot_area
-default_all.loc[0, 'Overall Qual'] = overall_qual
-default_all.loc[0, 'Neighborhood'] = neighborhood
-processed_data = preprocessor_all.transform(default_all)
-prediction = model_all.predict(processed_data)
-st.success(f"Predicted Sale Price (All Features Model): ${prediction[0]
-[0]:,.2f}")
+    default_all.loc[0, 'Age'] = age
+    default_all.loc[0, 'Gr Liv Area'] = gr_liv_area
+    default_all.loc[0, 'Lot Area'] = lot_area
+    default_all.loc[0, 'Overall Qual'] = overall_qual
+    default_all.loc[0, 'Neighborhood'] = neighborhood
+    processed_data = preprocessor_all.transform(default_all)
+    prediction = model_all.predict(processed_data)
+    st.success(f"Predicted Sale Price (All Features Model): ${prediction[0]
+    [0]:,.2f}")
