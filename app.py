@@ -9,7 +9,7 @@ import tensorflow as tf
 # model_selected = keras.models.load_model('model_selected.h5',
 custom_objects={'mse': tf.keras.losses.mean_squared_error}
 # model_all = keras.models.load_model('model_all.h5', custom_objects={'mse':
-tf.keras.losses.mean_squared_error)
+tf.keras.losses.mean_squared_error
 model_selected = keras.models.load_model('model_selected.h5')
 model_all = keras.models.load_model('model_all.h5')
 preprocessor_selected = joblib.load('preprocessor_selected.pkl')
