@@ -58,13 +58,13 @@ if st.button("Predict Sale Price"):
     'Neighborhood': [neighborhood]
     })
 # Preprocess input using the selected-features preprocessor
-processed_data = preprocessor_selected.transform(input_data)
+    processed_data = preprocessor_selected.transform(input_data)
 # Get prediction from the essential-features model
-prediction = model_selected.predict(processed_data)
-st.success(f"Predicted Sale Price (Essential Model): ${prediction[0]
-[0]:,.2f}")
-else:
-default_all = pd.read_csv('default_all_features.csv', index_col=0)
+    prediction = model_selected.predict(processed_data)
+    st.success(f"Predicted Sale Price (Essential Model): ${prediction[0]
+    [0]:,.2f}")
+  else:
+    default_all = pd.read_csv('default_all_features.csv', index_col=0)
 # Now, 'default_all' contains all the features expected by the
 preprocessor.
 # Overwrite the essential features with user inputs
