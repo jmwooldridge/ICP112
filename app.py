@@ -65,8 +65,7 @@ if st.button("Predict Sale Price"):
     [0]:,.2f}")
   else:
     default_all = pd.read_csv('default_all_features.csv', index_col=0)
-# Now, 'default_all' contains all the features expected by the
-preprocessor.
+# Now, 'default_all' contains all the features expected by the preprocessor.
 # Overwrite the essential features with user inputs
 default_all.loc[0, 'Age'] = age
 default_all.loc[0, 'Gr Liv Area'] = gr_liv_area
