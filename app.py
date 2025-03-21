@@ -48,6 +48,7 @@ options=["CollgCr", "Veenker", "Crawfor", "NoRidge",
 "Mitchel"])
 # When the user clicks the Predict button
 if st.button("Predict Sale Price"):
+
 if model_choice == "Essential Features Model":
 # Build a DataFrame from the essential features only
 input_data = pd.DataFrame({
