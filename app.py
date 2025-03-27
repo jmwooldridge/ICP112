@@ -7,9 +7,9 @@ import tensorflow as tf
 # Load pre-trained models and preprocessors
 try:
     model_selected = load_model('model_selected.h5', compile=False)
-    model_selected.compile(loss=tf.keras.losses.mean_squared_error)
+    model_selected.compile(loss=tf.keras.losses.MeanSquaredError())
     model_all = load_model('model_all.h5', compile=False)
-    model_all.compile(loss=tf.keras.losses.mean_squared_error)
+    model_all.compile(loss=tf.keras.losses.MeanSquaredError())
     preprocessor_selected = joblib.load('preprocessor_selected.pkl')
     preprocessor_all = joblib.load('preprocessor_all.pkl')
 except Exception as e:
